@@ -1,10 +1,20 @@
+#include <cstdlib>
 #include <iostream>
 #include <vector>
 #include <math.h>
-
+#include <time.h>
 typedef std::string text_t;
 using num = int;
 using namespace std;
+
+int rnum()
+{
+    srand((unsigned int)time(NULL));
+    int rnum = rand() % 10 + 1;
+    cout << rnum;
+
+    return 0;
+}
 
 int sq()
 {
@@ -21,11 +31,83 @@ int sq()
     return 0;
 }
 
+int anything()
+{
+    int rows = 8; // set the number of rows to 8
+
+    // Print the top half of the pyramid with increasing numbers
+    for (int i = 0; i <= rows; i++)
+    { // loop through each row
+        for (int j = 1; j <= i; j++)
+        {                     // loop through each column in the row
+            cout << j << " "; // print the current column number followed by a space
+        }
+        cout << endl; // move to the next line after printing all the columns in the current row
+    }
+
+    // Print the bottom half of the pyramid with decreasing numbers
+    for (int i = rows - 1; i >= 1; i--)
+    { // loop through each row in reverse order
+        for (int j = 1; j <= i; j++)
+        {                     // loop through each column in the row
+            cout << j << " "; // print the current column number followed by a space
+        }
+        cout << endl; // move to the next line after printing all the columns in the current row
+    }
+
+    for (int i = 0; i <= rows; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    for (int i = 0; i <= rows; i++)
+    {
+        for (int j = rows; 1 <= j; j--)
+        {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+int Searsh()
+{
+    // this is lnier Search
+    const string Arr[4] = {"Ahmed",
+                           "Mansour",
+                           "anyName",
+                           "jake"};
+    double size = sizeof(Arr) / sizeof(Arr[0]);
+    string myName;
+    cout << "Entter Name \n";
+    getline(cin, myName);
+    for (int i = 0; i < size; i++)
+    {
+        if (Arr[i] == myName)
+        {
+            cout << myName << " is here \n";
+        }
+    }
+
+    return 0;
+}
+
+int TotilPrice(){
+    
+}
+
 int main()
 {
-   //sq();
-    // const double n = (int)3.55;
-    // cout << "\t" << n << "\n";
+    Searsh();
+    // rnum();
+
+    // sq();
+    //  const double n = (int)3.55;
+    //  cout << "\t" << n << "\n";
 
     // cout << "Hello\n";
     // text_t Aname = "ahmed name \n";
@@ -36,11 +118,9 @@ int main()
 
     // // Take input using cin
     // cin >> name;
-
     // // Print output
     // cout << " \n" + name + "";
-   
-   
-   
+    //  like if  15 == 16 ? cout << "yes " : cout<< "no";
+
     return 0;
 }
