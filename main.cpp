@@ -96,16 +96,23 @@ int Searsh()
     return 0;
 }
 
-int TotilPrice(){
-    
+int TotilPrice()
+{
+    const double Prics[] = {51.77, 814.4, 484.18, 47.15, 481.54};
+   // int size = sizeof(Prics) / sizeof(Prics[0]);
+    double totile;
+    for (double Pric: Prics)
+    {
+        totile += Pric ;
+    }
+    cout << totile << "\n";
+
+    return 0;
 }
 
 int main()
 {
-    Searsh();
-    // rnum();
 
-    // sq();
     //  const double n = (int)3.55;
     //  cout << "\t" << n << "\n";
 
